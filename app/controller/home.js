@@ -3,6 +3,16 @@
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
+
+
+  async health() {
+    const { ctx } = this;
+    ctx.status = 200;
+    ctx.body = {
+      code: 0,
+      message: 'bilibili-reptile project is healthy',
+    };
+  }
   async index() {
     const { ctx } = this;
     const account = 350937042;

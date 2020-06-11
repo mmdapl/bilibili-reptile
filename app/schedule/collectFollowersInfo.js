@@ -5,10 +5,10 @@ class CollectFollowersInfo extends Subscription {
   // 通过 schedule 属性来设置定时任务的执行间隔等配置
   static get schedule() {
     return {
-      cron: '14 20 5 * * * ', // 每天5点20执行
+      // cron: '14 20 5 * * * ', // 每天5点20执行
       // interval: '1m', // 1 分钟间隔
       type: 'worker', // all:指定所有worker执行，worker:随机指定一个worker执行
-      // disable: true,
+      disable: true,
     };
   }
 

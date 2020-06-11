@@ -9,7 +9,7 @@ class CollectAccountInfo extends Subscription {
       cron: '38 25 1 * * *', // 每天1点25执行
       // interval: '1m', // 1 分钟间隔
       type: 'worker', // all:指定所有worker执行，worker:随机指定一个worker执行
-      // disable: true,
+      disable: true,
     };
   }
 

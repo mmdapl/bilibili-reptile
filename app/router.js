@@ -17,4 +17,7 @@ module.exports = app => {
 
   // 是否正在关注
   router.get('/api/reptile/isFollowing', controller.search.isFollowingBSiteUp);
+
+  // 健康检测
+  router.get('/api/reptile/health', controller.home.health);
 };

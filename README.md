@@ -10,7 +10,7 @@
 
 - 本项目只是简要的爬取B站上相关接口信息，目的在于练手，若有兴趣，切勿用作从事废话活动，例如恶意攻击小破站（B站架构中有相关的熔断和削峰措施`劝退`）
 - 为避免作者个人服务器等配置数据公开，分享的项目代码缺乏`config`及`Dockerfile`配置文件，且已尽力做好数据脱敏处理，**请大家理智学习，友善交流！**
-- 若本项目对你有帮助，确实需要config等配置及数据库SQL等，便于项目运行及线上部署，**欢迎大家积极issues或star，我将第一时间提供相关代码；**不过相信以上代码足够进行基础学习。哈哈哈哈~~~
+- 若本项目对你有帮助，确实需要config等配置及数据库SQL等，便于项目运行及线上部署，**欢迎大家积极issues或star，我将第一时间提供相关代码。** 不过相信以上代码足够进行基础学习。哈哈哈哈~~~
 - 既然看到这里了，请关注一下B站[Rong姐姐好可爱](https://space.bilibili.com/350937042)吧
 
 ## 爬取效果
@@ -290,18 +290,13 @@ jsonp:接口跨域，默认jsonp  --必须【建议了解一下jsonp跨域解决
 
 
 
-## 快速开始
-
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
 
 ### 生产环境
 
 ```bash
 $ npm i
 $ npm run dev
-$ open http://localhost:7001/
+$ open http://localhost:7921/
 ```
 
 ### 正式环境
@@ -311,6 +306,40 @@ $ npm start
 $ npm stop
 ```
 
+### docker部署
+参考主目录下的Dockerfile文件，自行打包
+```bash
+# 安装node
+FROM node:latest
+# 标签
+LABEL version="Beta@1.0"
+LABEL description="Eggjs框架开发的定时爬取B站用户基础数据"
+# 作者
+MAINTAINER Taylor <2237221210@qq.com>
+# 创建项目空间
+RUN mkdir -p /web-project/node/bilibili-reptile
+# 将当前代码文件复制到工作区域
+COPY . /web-project/node/bilibili-reptile
+# 进入 vendors
+WORKDIR /web-project/node/bilibili-reptile
+# 指定npm仓库
+RUN npm install --registry https://registry.npm.taobao.org
+EXPOSE 7921
+# 项目启动 
+CMD ["npm","run","start"]
+```
+
+执行命令进行打包，构建镜像
+```bash
+## 注意熟悉docker命令
+docker build -t <镜像名:版本号> . 
+```
+镜像创建完成后，可以构建容器了，简单示例一下：
+```bash
+
+## 后台运行
+docker run -d name bilibili -p 7921:7921 <镜像id>
+```
 ### 友情链接
 
 - 作者博客：[沉住气、慢慢来](http://blog.142vip.cn)
