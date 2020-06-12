@@ -1,7 +1,7 @@
 {
   "name": "bilibiliReptile",
   "version": "1.0.0",
-  "description": "基于Eggjs框架定时爬取B站用户相关数据进行存储分析，提供有效接口或grpc服务供外部使用",
+  "description": "基于Eggjs框架定时爬取B站用户相关数据进行存储分析，提供有效接口供外部使用",
   "private": true,
   "egg": {
     "declarations": true

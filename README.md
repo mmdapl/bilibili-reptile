@@ -1,10 +1,14 @@
-# bilibiliReptile项目简要说明
+<p align="center">
+<a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg"></a> 
+<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-个人网站-orange.svg"></a>
+<a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/yapi-接口系统-8fe.svg"></a>
+<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-我的博客-blue.svg"></a>
+<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/github-Github-9ac.svg"></a>
+<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/gitee-码云-4ed.svg"></a>
+<a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
+</p>
 
-时间：2020年4月20日 晚.
-
-
-
-基于Eggjs框架定时爬取B站用户相关数据进行存储分析，提供有效接口或grpc服务供外部使用
+基于Eggjs框架定时爬取B站用户相关数据进行存储分析，提供有效接口或grpc服务供外部使用。[部署说明](部署说明.md)
 
 ## 基本要求
 
@@ -340,8 +344,11 @@ docker build -t <镜像名:版本号> .
 ## 后台运行
 docker run -d name bilibili -p 7921:7921 <镜像id>
 ```
+
 ### 友情链接
 
 - 作者博客：[沉住气、慢慢来](http://blog.142vip.cn)
 - 作者网站：[凡是过往、皆为序章](http://142vip.cn)`维修中`
 - 授权平台：[Oauth2支撑平台](http://oauth2.142vip.cn)`测试中`
+
+<p style="text-algin:right">时间：2020年4月20日 晚.</p>
