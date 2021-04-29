@@ -26,15 +26,16 @@
 
 - 个人信息
 
-![up个人信息](images/account.png)
+![up个人信息](https://cdn.jsdelivr.net/gh/lir0115/images@main/bilibili_reptile/account.2fnam9sg5x34.png)
 
 - 关注人信息
 
-![正在关注up信息](images/followers.png)
+![正在关注up信息](https://cdn.jsdelivr.net/gh/lir0115/images@main/bilibili_reptile/followings.16raxmn0zp9c.png)
+
 
 - 被关注人信息
 
-![up粉丝信息](images/followers.png)
+![up粉丝信息](https://cdn.jsdelivr.net/gh/lir0115/images@main/bilibili_reptile/followers.36hf97igu6y0.png)
 
 ## 数据量问题
 
@@ -350,10 +351,6 @@ docker build -t <镜像名:版本号> .
 docker run -d name bilibili -p 7921:7921 <镜像id>
 ```
 
-### 友情链接
 
-- 作者博客：[沉住气、慢慢来](http://blog.142vip.cn)
-- 作者网站：[凡是过往、皆为序章](http://142vip.cn)`维修中`
-- 授权平台：[Oauth2支撑平台](http://oauth2.142vip.cn)`测试中`
 
 <p align="right">时间：2020年4月20日 晚.</p>
